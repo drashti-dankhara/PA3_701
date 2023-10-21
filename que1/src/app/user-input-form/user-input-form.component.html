@@ -1,0 +1,19 @@
+<div class="user-form">
+    <h2>User Input Form</h2>
+    <form (ngSubmit)="onSubmit()" name="userForm">
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}" required><br>
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" required><br>
+        <label>Address:</label>
+        <input type="text" [(ngModel)]="user.address" [ngModelOptions]="{standalone: true}" required><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div *ngIf="submitted" class="user-details">
+        <h3>Submitted Details:</h3>
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Address:</strong> {{ user.address }}</p>
+    </div>
+</div>

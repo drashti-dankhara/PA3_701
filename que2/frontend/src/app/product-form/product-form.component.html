@@ -1,0 +1,10 @@
+<div class="product-form">
+    <h2>Add a New Product</h2>
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="productName"><br>
+    <label>Price:</label>
+    <input type="number" [(ngModel)]="productPrice"><br>
+    <label>Description:</label>
+    <input type="text" [(ngModel)]="productDescription"><br>
+    <button (click)="addProduct()">Add Product</button>
+</div>

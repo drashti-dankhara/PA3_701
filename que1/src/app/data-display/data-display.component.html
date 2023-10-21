@@ -1,0 +1,16 @@
+<div>
+    <h2>Data Display:</h2>
+    <div>Integer: {{ integerData }}</div>
+    <div>String: {{ stringData }}</div>
+    <div>Date: {{ dateData | date }}</div>
+    <ul>
+        <li *ngFor="let item of arrayData1">{{ item }}</li>
+    </ul>
+
+    <h2>Combo Box:</h2>
+    <select [(ngModel)]="selectedValue">
+      <option *ngFor="let item of arrayData2" [value]="item">{{ item }}</option>
+    </select>
+    <div *ngIf="selectedValue === 'textbox'">Textbox: <input type="text"></div>
+    <div *ngIf="selectedValue === 'textarea'">Textarea: <textarea></textarea></div>
+</div>

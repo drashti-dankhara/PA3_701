@@ -1,0 +1,10 @@
+<div class="product-form">
+    <h2>Edit Product</h2>
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="product.name"><br>
+    <label>Price:</label>
+    <input type="number" [(ngModel)]="product.price"><br>
+    <label>Description:</label>
+    <input type="text" [(ngModel)]="product.description"><br>
+    <button (click)="updateProduct()">Update Product</button>
+</div>
